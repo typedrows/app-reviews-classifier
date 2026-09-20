@@ -12,5 +12,9 @@
             "actorSpecification": 1,
             "views": {}
         }
+    },
+    "defaultRunOptions": {
+        "memoryMbytes": 1024,
+        "timeoutSecs": 3600
     }
 }
