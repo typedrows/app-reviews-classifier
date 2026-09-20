@@ -8,13 +8,11 @@
     "dockerfile": "../Dockerfile",
     "input": "./input_schema.json",
     "storages": {
-        "dataset": {
-            "actorSpecification": 1,
-            "views": {}
-        }
+        "dataset": "./dataset_schema.json"
     },
     "defaultRunOptions": {
         "memoryMbytes": 1024,
         "timeoutSecs": 3600
-    }
+    },
+    "output": "./output_schema.json"
 }

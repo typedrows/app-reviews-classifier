@@ -1,0 +1,28 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Reviews",
+            "transformation": {
+                "fields": ["platform", "appId", "date", "rating", "text", "issue", "issue_confidence", "severity", "would_churn", "review_needed", "url"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "platform": { "label": "Store", "format": "text" },
+                    "appId": { "label": "App", "format": "text" },
+                    "date": { "label": "Date", "format": "date" },
+                    "rating": { "label": "Rating", "format": "number" },
+                    "text": { "label": "Review", "format": "text" },
+                    "issue": { "label": "Issue", "format": "text" },
+                    "issue_confidence": { "label": "Confidence", "format": "number" },
+                    "severity": { "label": "Severity", "format": "number" },
+                    "would_churn": { "label": "Churn", "format": "number" },
+                    "review_needed": { "label": "Review needed", "format": "boolean" },
+                    "url": { "label": "URL", "format": "link" }
+                }
+            }
+        }
+    }
+}

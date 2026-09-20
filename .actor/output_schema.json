@@ -1,0 +1,12 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of App Reviews Classifier",
+    "properties": {
+        "reviews": {
+            "type": "string",
+            "title": "Classified reviews",
+            "description": "One item per review: raw store fields plus issue, severity, flags and confidence columns.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        }
+    }
+}
