@@ -1,13 +1,16 @@
 {
     "actorSpecification": 1,
     "name": "app-reviews-classifier",
-    "title": "App Reviews Classifier",
-    "description": "Scrape App Store and Google Play reviews and add typed classification columns (issue, severity, flags) with the jev classifier.",
+    "title": "App Store & Google Play Reviews Scraper + AI Classifier",
+    "description": "Scrape App Store and Google Play reviews, then classify and categorize every review: main issue (crash, login, payment, ads, support, UX), severity score, churn flag, each with a confidence number. Sentiment and complaint analysis for app reviews at one tenth of LLM cost. Export CSV or JSON.",
     "version": "1.0",
     "buildTag": "latest",
     "dockerfile": "../Dockerfile",
     "input": "./input_schema.json",
     "storages": {
-        "dataset": { "actorSpecification": 1, "views": {} }
+        "dataset": {
+            "actorSpecification": 1,
+            "views": {}
+        }
     }
 }
