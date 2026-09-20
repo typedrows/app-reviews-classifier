@@ -1,0 +1,60 @@
+{
+    "title": "App Reviews Classifier input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "apps": {
+            "title": "Apps",
+            "type": "array",
+            "description": "App Store numeric ids or URLs, and Google Play package ids or URLs. All digits or an apps.apple.com URL is treated as App Store; anything else as Google Play.",
+            "editor": "stringList",
+            "prefill": [
+                "https://apps.apple.com/us/app/whatsapp-messenger/id310633997",
+                "com.whatsapp"
+            ]
+        },
+        "countries": {
+            "title": "Countries",
+            "type": "array",
+            "description": "Two-letter store country codes.",
+            "editor": "stringList",
+            "default": ["us"]
+        },
+        "language": {
+            "title": "Language",
+            "type": "string",
+            "description": "Google Play review language (ignored for the App Store).",
+            "editor": "textfield",
+            "default": "en"
+        },
+        "maxReviewsPerApp": {
+            "title": "Max reviews per app",
+            "type": "integer",
+            "description": "Per app and country. The App Store RSS feed caps at 500 newest reviews per country.",
+            "default": 500,
+            "minimum": 1,
+            "maximum": 20000
+        },
+        "classify": {
+            "title": "Add classification columns",
+            "type": "boolean",
+            "description": "Run every review through jev and add the typed columns.",
+            "default": true
+        },
+        "questions": {
+            "title": "Custom questions",
+            "type": "object",
+            "description": "Optional jev question schema replacing the preset. Up to 50 questions of type noul, choice (criteria = {label: description}) or score (criteria = list of descriptions, low end first).",
+            "editor": "json"
+        },
+        "confidenceThreshold": {
+            "title": "Confidence threshold",
+            "type": "number",
+            "description": "Rows with any choice/score confidence below this get review_needed: true.",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 0.8
+        }
+    },
+    "required": ["apps"]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "app-reviews-classifier",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Scrape App Store and Google Play reviews and add typed classification columns with jev.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "apify": "^3.2.6",
+    "google-play-scraper": "^10.0.0"
+  },
+  "license": "MIT"
+}
