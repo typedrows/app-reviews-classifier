@@ -70,12 +70,9 @@ for (const { platform, appId } of targets) {
             }
         }
 
+        // Scrape billing rides on Apify's built-in apify-default-dataset-item event, charged by pushData itself.
         await Actor.pushData(reviews);
         scraped += reviews.length;
-        if (await charge('review-scraped', reviews.length)) {
-            log.warning('Max charge reached for review-scraped; finishing up.');
-            stop = true;
-        }
     }
 }
 

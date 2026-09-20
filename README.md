@@ -72,8 +72,8 @@ Replace the preset with up to 50 of your own:
 
 | Event | Charged |
 |---|---|
-| `review-scraped` | Once per review pushed to the dataset |
-| `review-classified` | Once per review successfully classified |
+| Review scraped (built-in dataset item) | Once per review row written, USD 0.0001 |
+| Review classified | Once per review successfully classified, USD 0.0005 |
 
 Set `classify: false` to pay only for scraping.
 
